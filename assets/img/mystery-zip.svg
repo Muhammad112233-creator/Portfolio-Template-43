@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="120" viewBox="0 0 2400 120" preserveAspectRatio="none">
+  <defs>
+    <pattern id="teeth" x="0" y="0" width="30" height="120" patternUnits="userSpaceOnUse">
+      <rect x="0" y="46" width="16" height="28" fill="#2a2724"/>
+      <rect x="16" y="50" width="8" height="20" fill="#171614"/>
+      <rect x="13" y="58" width="6" height="4" fill="#4a443f"/>
+    </pattern>
+    <linearGradient id="rail" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0908"/><stop offset=".2" stop-color="#1d1a17"/><stop offset=".5" stop-color="#070605"/><stop offset=".8" stop-color="#1d1a17"/><stop offset="1" stop-color="#0a0908"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="120" fill="url(#rail)"/>
+  <rect width="2400" height="120" fill="url(#teeth)" opacity="0.9"/>
+  <rect y="0" width="2400" height="6" fill="#000" opacity=".8"/>
+  <rect y="114" width="2400" height="6" fill="#000" opacity=".8"/>
+</svg>

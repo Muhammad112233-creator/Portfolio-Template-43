@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3a3632"/><stop offset=".45" stop-color="#171512"/><stop offset="1" stop-color="#2c2824"/>
+    </linearGradient>
+  </defs>
+  <rect x="30" y="0" width="60" height="46" rx="8" fill="url(#metal)" stroke="#4d4740" stroke-width="2"/>
+  <circle cx="60" cy="74" r="34" fill="none" stroke="#3f3a34" stroke-width="10"/>
+  <circle cx="60" cy="74" r="30" fill="none" stroke="#141210" stroke-width="4"/>
+</svg>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nocturne — Rare Footwear, Sealed Drops & Night Rituals</title>
+<meta name="description" content="Nocturne is a house of archived footwear: live relic auctions, sealed mystery vaults and atelier restorations. Enter the night. Join the cult." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nocturne — Wear the Night" />
+<meta property="og:description" content="Rare footwear, sealed vaults and night rituals. A house for collectors who don't chase hype — they consecrate it." />
+<meta property="og:image" content="assets/img/hero-cloud.jpg" />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="assets/fonts/bodoni-moda-italic.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/responsive.css" />
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('home-loading');
+  }
+</script>
+</head>
+<body class="home">
+  <!-- ░░ PRELOADER ░░ -->
+  <div class="home-preloader" aria-hidden="true">
+    <div class="home-preloader__meta">
+      <span class="home-preloader__count" data-preloader-count>0</span>
+    </div>
+  </div>
+
+  <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+  <div class="page">
+    <!-- ░░ HEADER ░░ -->
+    <header class="page-header">
+      <div class="site-header">
+        <a class="site-header__logo" href="index.html" aria-label="Nocturne">
+          <svg class="logo-mark" viewBox="0 0 250 115" role="img" aria-label="Nocturne">
+            <defs>
+              <filter id="logoGrain" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="4" result="n" />
+                <feColorMatrix in="n" type="saturate" values="0" result="g" />
+                <feComponentTransfer in="g" result="grain">
+                  <feFuncA type="discrete" tableValues="0 .55 0 .3 .12 0 .4 0" />
+                </feComponentTransfer>
+                <feComposite in="grain" in2="SourceGraphic" operator="in" result="tex" />
+                <feMerge><feMergeNode in="SourceGraphic" /><feMergeNode in="tex" /></feMerge>
+              </filter>
+            </defs>
+            <g transform="translate(125 57.5) scale(-1 1) translate(-125 -57.5)" filter="url(#logoGrain)">
+              <text class="logo-mark__type" x="125" y="72" text-anchor="middle">NOCTURNE</text>
+            </g>
+          </svg>
+        </a>
+        <nav class="site-header__nav" aria-label="Utility">
+          <ul>
+            <li><a href="#vault">My Archive</a></li>
+            <li><a href="#vault">Bag<span class="site-header__cart-count"></span></a></li>
+            <li><a href="#reliquary">Wishlist</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">
+        <span class="menu-toggle__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="25" viewBox="0 0 29 25" fill="none">
+            <path d="M0 0H0.6C0.92 1.08 1.68 1.6 5.16 1.6H23.76C26.68 1.6 27.36 1 27.76 0H28.28V6.52H27.76C27.36 5.48 26.68 4.88 23.6 4.88H5.16C1.68 4.88 0.92 5.44 0.6 6.52H0V0ZM27.44 6.52H27.76L27.8 6.84L27.44 6.52Z" fill="#f9f9f9"/>
+            <path d="M0 8.82812H0.6C0.92 9.90812 1.68 10.4281 5.16 10.4281H23.76C26.68 10.4281 27.36 9.82812 27.76 8.82812H28.28V15.3481H27.76C27.36 14.3081 26.68 13.7081 23.6 13.7081H5.16C1.68 13.7081 0.92 14.2681 0.6 15.3481H0V8.82812ZM27.44 15.3481H27.76L27.8 15.6681L27.44 15.3481Z" fill="#f9f9f9"/>
+            <path d="M0 17.6562H0.6C0.92 18.7362 1.68 19.2562 5.16 19.2562H23.76C26.68 19.2562 27.36 18.6562 27.76 17.6562H28.28V24.1762H27.76C27.36 23.1362 26.68 22.5362 23.6 22.5362H5.16C1.68 22.5362 0.92 23.0962 0.6 24.1762H0V17.6562ZM27.44 24.1762H27.76L27.8 24.4962L27.44 24.1762Z" fill="#f9f9f9"/>
+          </svg>
+        </span>
+        <span class="menu-toggle__x" aria-hidden="true"><i></i><i></i></span>
+      </button>
+
+      <!-- ░░ FULLSCREEN MENU ░░ -->
+      <div class="site-menu" id="site-menu">
+        <div class="site-menu__bg" aria-hidden="true">
+          <div class="site-menu__bg--3d"></div>
+          <img class="site-menu__mesh" src="assets/img/menu-clouds.jpg" alt="" decoding="async" data-menu-clouds />
+        </div>
+        <nav class="site-menu__nav" aria-label="Primary">
+          <ul>
+            <li><a href="#vault">Vaults</a><img class="site-menu__icon" src="assets/img/icon-chest.svg" alt="" aria-hidden="true" /></li>
+            <li><a href="#reliquary">Footwear</a><img class="site-menu__icon" src="assets/img/icon-shoe.svg" alt="" aria-hidden="true" /></li>
+            <li><a href="#auctions">Auctions</a><img class="site-menu__icon" src="assets/img/icon-gavel.svg" alt="" aria-hidden="true" /></li>
+            <li><a href="#hunt">Source It</a><img class="site-menu__icon" src="assets/img/icon-eye.svg" alt="" aria-hidden="true" /></li>
+            <li><a href="#atelier">Atelier</a><img class="site-menu__icon" src="assets/img/icon-hand.svg" alt="" aria-hidden="true" /></li>
+            <li><a href="#journal">Journal</a><img class="site-menu__icon" src="assets/img/icon-moth.svg" alt="" aria-hidden="true" /></li>
+          </ul>
+        </nav>
+        <ul class="site-menu__socials">
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">TikTok</a></li>
+          <li><a href="#" rel="noopener">Discord</a></li>
+          <li><a href="#" rel="noopener">WhatsApp</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ░░ SOUND ░░ -->
+      <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle ambient sound">
+        <span class="sound-toggle__wave" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sound-toggle__off">Sound off</span>
+        <span class="sound-toggle__on">Sound on</span>
+      </button>
+      <span class="sound-hint" aria-hidden="true">Best worn with the volume low, after midnight.</span>
+    </header>
+
+    <!-- ░░ MAIN ░░ -->
+    <main id="main">
+      <div class="entry-content">
+
+        <!-- ═══════════ 01 · HERO ═══════════ -->
+        <section class="block-hero alignfull">
+          <div class="block-hero__decor" aria-hidden="true">
+            <div class="block-hero__grad"></div>
+            <img class="block-hero__lines" src="assets/img/contact-lines.svg" alt="" />
+            <img class="block-hero__arc" src="assets/img/hero-arc.svg" alt="" />
+            <img class="block-hero__art" src="assets/img/hero-cloud.jpg" alt="" decoding="async" fetchpriority="high" data-hero-3d data-3d-contain data-3d-margin="1.12" />
+          </div>
+          <h1 class="block-hero__title" data-title="Wear&#10;The Night">Wear<br />The Night</h1>
+          <p class="block-hero__tagline">Forged for collectors, worn by the night.</p>
+          <a class="block-hero__cta" href="#vault" aria-label="Enter the Vault">Enter the Vault</a>
+        </section>
+
+        <!-- ═══════════ 02 · MANIFESTO (horizontal pin) ═══════════ -->
+        <section class="manifesto alignfull" id="manifesto">
+          <div class="manifesto__track">
+            <!-- panel A -->
+            <div class="manifesto__panel manifesto__panel--a">
+              <img class="manifesto__arc" src="assets/img/hero-arc.svg" alt="" aria-hidden="true" />
+              <img class="manifesto__img manifesto__img--left" src="assets/img/manifesto-left.jpg" alt="Baroque figure resting a sculpted runner on a gilded pedestal" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--topright" src="assets/img/manifesto-topright.jpg" alt="Candlelit portrait of two collectors holding a relic" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--portrait" src="assets/img/manifesto-portrait.jpg" alt="Pre-raphaelite portrait with crimson birds" loading="lazy" decoding="async" />
+              <img class="manifesto__angel" src="assets/img/manifesto-angel.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <p class="manifesto__text manifesto__text--intro">This isn’t fashion — it’s admission.<br />“we don’t chase drops. we consecrate them.”</p>
+              <h2 class="manifesto__title">Mini Manifesto</h2>
+              <p class="manifesto__text manifesto__text--side">Nocturne is a house of archives that keeps the flame of true obsession.</p>
+              <a class="manifesto__cta" href="#atelier">Meet the House</a>
+            </div>
+            <!-- panel B -->
+            <div class="manifesto__panel manifesto__panel--b">
+              <img class="manifesto__img manifesto__img--art2" src="assets/img/manifesto-art2.jpg" alt="Cherubs carrying a sculpted runner through clouds" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--art5" src="assets/img/manifesto-art5.jpg" alt="Merchant presiding over a chest of relics" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--pill" src="assets/img/manifesto-pill.jpg" alt="Circular painting of angels around a black runner" loading="lazy" decoding="async" />
+              <p class="manifesto__text manifesto__text--b1">Plugged into ateliers worldwide who refuse to gatekeep, and collectors whose archives read like scripture.</p>
+              <h2 class="manifesto__title">Honor the Craft</h2>
+              <a class="manifesto__cta" href="#vault">Join the Circle</a>
+              <p class="manifesto__text manifesto__text--b2">Made for the ones who know the work — the “from nothing to heirloom” energy.</p>
+              <p class="manifesto__text manifesto__text--b3">Built from midnight sketches and patient hands. Here, rarity isn’t a flex — it’s a philosophy.</p>
+            </div>
+            <!-- panel C -->
+            <div class="manifesto__panel manifesto__panel--c">
+              <img class="manifesto__arc" src="assets/img/hero-arc.svg" alt="" aria-hidden="true" />
+              <img class="manifesto__img manifesto__img--yellow" src="assets/img/manifesto-yellow.jpg" alt="Classical youth wearing sculpted sneakers" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--dunk" src="assets/img/manifesto-dunk.jpg" alt="Painterly still of a low runner on stone" loading="lazy" decoding="async" />
+              <img class="manifesto__img manifesto__img--bacchus" src="assets/img/manifesto-bacchus.jpg" alt="Bacchic figure crowned with gilded leaves" loading="lazy" decoding="async" />
+              <p class="manifesto__text manifesto__text--c-intro">Numbered out of the archive — restorations, customs and mourning-veil silhouettes, all in one vault.</p>
+              <h2 class="manifesto__title">Rarity Is a Ritual</h2>
+              <a class="manifesto__cta" href="#reliquary">See the Relics</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════ 03 · MYSTERY VAULT ═══════════ -->
+        <section class="mystery-box alignfull" id="vault">
+          <img class="mystery-box__chest" src="assets/img/mystery-chest.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+
+          <a class="mystery-box__cta" href="#atelier">Join the inner circle</a>
+
+          <div class="mystery-box__cover mystery-box__cover--top">
+            <img class="mystery-box__curtain mystery-box__curtain--top" src="assets/img/mystery-curtain-top.svg" alt="" aria-hidden="true" />
+            <img class="mystery-box__texture" src="assets/img/mystery-texture.jpg" alt="" aria-hidden="true" />
+            <h2 class="mystery-box__title">Mystery B<span class="mystery-box__o">o<img class="mystery-box__hand" src="assets/img/mystery-hand.png" alt="" aria-hidden="true" /></span>x</h2>
+          </div>
+
+          <div class="mystery-box__cover mystery-box__cover--bottom">
+            <img class="mystery-box__curtain mystery-box__curtain--bottom" src="assets/img/mystery-curtain-bottom.svg" alt="" aria-hidden="true" />
+            <img class="mystery-box__texture" src="assets/img/mystery-texture.jpg" alt="" aria-hidden="true" />
+            <div class="mystery-box__copy">
+              <p>Every vault is a coded drop from the inner circle, assembled by our archivists for those who don’t chase hype, they consecrate it.</p>
+              <p>Each piece lands different — curated, elevated, provenance-checked — built to make the street look twice.</p>
+              <p>Welcome to the house of night where the bold get blessed and the ordinary stay locked out.</p>
+            </div>
+          </div>
+
+          <button class="mystery-box__zip" type="button" aria-label="Unseal the vault" tabindex="-1">
+            <img class="mystery-box__zip-chain" src="assets/img/mystery-zip.svg" alt="" aria-hidden="true" />
+            <img class="mystery-box__zip-slider" src="assets/img/mystery-zip.svg" alt="" aria-hidden="true" />
+          </button>
+        </section>
+
+        <!-- ═══════════ 04 · FIND IT AT MY PRICE ═══════════ -->
+        <section class="find-price alignfull" id="hunt">
+          <div class="find-price__decor" aria-hidden="true">
+            <img class="find-price__arcs" src="assets/img/contact-lines.svg" alt="" />
+            <img class="find-price__angel" src="assets/img/find-price-cupid.png" alt="" loading="lazy" decoding="async" />
+          </div>
+          <h2 class="find-price__title">Find it at<br />my price</h2>
+          <a class="find-price__bar" href="#hunt" data-typewriter='["Arc Runner \u201995","Court Low Ivory","Trail 700 Ember","Runner 90 Fog"]'>
+            <span class="find-price__query" data-type-target>Arc Runner ’95</span>
+            <span class="find-price__caret" aria-hidden="true"></span>
+            <img class="find-price__arrow" src="assets/img/find-arrow.svg" alt="" aria-hidden="true" />
+          </a>
+          <p class="find-price__tagline">You set the price.<br />We hunt the relic.<br />No raffles. No Ls. Just results.</p>
+        </section>
+
+        <!-- ═══════════ 05 · TOP RELICS ═══════════ -->
+        <section class="tsneak alignfull" id="reliquary" data-top-sneakers>
+          <h2 class="tsneak__title">Top Relics</h2>
+          <div class="tsneak__body">
+            <ol class="tsneak__list">
+              <li>
+                <a class="tsneak__row is-active" href="#reliquary" data-ts-img="assets/img/relic-01.png" data-ts-num="01">
+                  <span class="tsneak__row-name">Arc Runner ’95 Ember Wreath</span>
+                  <span class="tsneak__row-num">I</span>
+                </a>
+              </li>
+              <li>
+                <a class="tsneak__row" href="#reliquary" data-ts-img="assets/img/relic-02.png" data-ts-num="02">
+                  <span class="tsneak__row-name">Court Low Ivory Veil</span>
+                  <span class="tsneak__row-num">II</span>
+                </a>
+              </li>
+              <li>
+                <a class="tsneak__row" href="#reliquary" data-ts-img="assets/img/relic-03.png" data-ts-num="03">
+                  <span class="tsneak__row-name">Varsity Relic Nightfall Bones</span>
+                  <span class="tsneak__row-num">III</span>
+                </a>
+              </li>
+              <li>
+                <a class="tsneak__row" href="#reliquary" data-ts-img="assets/img/relic-04.png" data-ts-num="04">
+                  <span class="tsneak__row-name">Chrome Idol Camo Reliquary</span>
+                  <span class="tsneak__row-num">IV</span>
+                </a>
+              </li>
+              <li>
+                <a class="tsneak__row" href="#reliquary" data-ts-img="assets/img/relic-05.png" data-ts-num="05">
+                  <span class="tsneak__row-name">Trail 700 Sunspill Lemonade</span>
+                  <span class="tsneak__row-num">V</span>
+                </a>
+              </li>
+            </ol>
+
+            <figure class="tsneak__figure">
+              <span class="tsneak__ruler tsneak__ruler--left" aria-hidden="true"></span>
+              <span class="tsneak__ruler tsneak__ruler--right" aria-hidden="true"></span>
+              <img class="tsneak__shelf" src="assets/img/tsneak-shelf.svg" alt="" aria-hidden="true" />
+              <img class="tsneak__img" data-ts-image src="assets/img/relic-01.png" alt="Arc Runner ’95 Ember Wreath" decoding="async" />
+              <span class="tsneak__num" data-ts-number aria-hidden="true">01</span>
+            </figure>
+          </div>
+          <a class="tsneak__cta" href="#vault" aria-label="Enter the vault">Enter the vault</a>
+        </section>
+
+        <!-- ═══════════ 06 · TRENDING AUCTIONS ═══════════ -->
+        <section class="trend alignfull" id="auctions">
+          <h2 class="trend__title">Trending Auctions</h2>
+          <div class="trend__slider swiper" data-trend-slider data-count="4">
+            <ul class="trend__grid swiper-wrapper">
+              <li class="trend__card swiper-slide" data-auction-id="1201" data-ends-at="0">
+                <a class="trend__media" data-cursor="Bid" href="#auctions">
+                  <img src="assets/img/trend-01.png" width="819" height="1024" alt="Arc Runner ’95 Ember Wreath" loading="lazy" decoding="async" />
+                  <img decoding="async" class="trend__glow-bar" src="assets/img/trend-glow.svg" alt="" aria-hidden="true" />
+                </a>
+                <div class="trend__head">
+                  <div class="trend__id">
+                    <a class="trend__name" href="#auctions">Arc Runner ’95 Ember Wreath</a>
+                  </div>
+                  <div class="trend__time">
+                    <span class="trend__label">Time left</span>
+                    <span class="trend__timer js-timer" aria-live="polite"></span>
+                  </div>
+                </div>
+                <p class="trend__current">
+                  <span class="trend__label">Current bid:</span>
+                  <span class="trend__amount js-current">315.00&nbsp;€</span>
+                </p>
+                <div class="trend__cta">
+                  <a class="trend__details" href="#auctions" aria-label="Show details — Arc Runner ’95 Ember Wreath">Show details</a>
+                  <button type="button" class="trend__bid" data-bid-open="1201" data-min="340">Bid now</button>
+                </div>
+              </li>
+              <li class="trend__card swiper-slide" data-auction-id="1202" data-ends-at="0">
+                <a class="trend__media" data-cursor="Bid" href="#auctions">
+                  <img src="assets/img/trend-02.png" width="819" height="1024" alt="Court Low Ivory Veil" loading="lazy" decoding="async" />
+                  <img decoding="async" class="trend__glow-bar" src="assets/img/trend-glow.svg" alt="" aria-hidden="true" />
+                </a>
+                <div class="trend__head">
+                  <div class="trend__id">
+                    <a class="trend__name" href="#auctions">Court Low Ivory Veil</a>
+                  </div>
+                  <div class="trend__time">
+                    <span class="trend__label">Time left</span>
+                    <span class="trend__timer js-timer" aria-live="polite"></span>
+                  </div>
+                </div>
+                <p class="trend__current">
+                  <span class="trend__label">Current bid:</span>
+                  <span class="trend__amount js-current">195.00&nbsp;€</span>
+                </p>
+                <div class="trend__cta">
+                  <a class="trend__details" href="#auctions" aria-label="Show details — Court Low Ivory Veil">Show details</a>
+                  <button type="button" class="trend__bid" data-bid-open="1202" data-min="220">Bid now</button>
+                </div>
+              </li>
+              <li class="trend__card swiper-slide" data-auction-id="1203" data-ends-at="0">
+                <a class="trend__media" data-cursor="Bid" href="#auctions">
+                  <img src="assets/img/trend-03.png" width="819" height="1024" alt="Varsity Relic Nightfall Bones" loading="lazy" decoding="async" />
+                  <img decoding="async" class="trend__glow-bar" src="assets/img/trend-glow.svg" alt="" aria-hidden="true" />
+                </a>
+                <div class="trend__head">
+                  <div class="trend__id">
+                    <a class="trend__name" href="#auctions">Varsity Relic Nightfall Bones</a>
+                  </div>
+                  <div class="trend__time">
+                    <span class="trend__label">Time left</span>
+                    <span class="trend__timer js-timer" aria-live="polite"></span>
+                  </div>
+                </div>
+                <p class="trend__current">
+                  <span class="trend__label">Current bid:</span>
+                  <span class="trend__amount js-current">720.00&nbsp;€</span>
+                </p>
+                <div class="trend__cta">
+                  <a class="trend__details" href="#auctions" aria-label="Show details — Varsity Relic Nightfall Bones">Show details</a>
+                  <button type="button" class="trend__bid" data-bid-open="1203" data-min="760">Bid now</button>
+                </div>
+              </li>
+              <li class="trend__card swiper-slide" data-auction-id="1204" data-ends-at="0">
+                <a class="trend__media" data-cursor="Bid" href="#auctions">
+                  <img src="assets/img/trend-04.png" width="819" height="1024" alt="Chrome Idol Camo Reliquary" loading="lazy" decoding="async" />
+                  <img decoding="async" class="trend__glow-bar" src="assets/img/trend-glow.svg" alt="" aria-hidden="true" />
+                </a>
+                <div class="trend__head">
+                  <div class="trend__id">
+                    <a class="trend__name" href="#auctions">Chrome Idol Camo Reliquary</a>
+                  </div>
+                  <div class="trend__time">
+                    <span class="trend__label">Time left</span>
+                    <span class="trend__timer js-timer" aria-live="polite"></span>
+                  </div>
+                </div>
+                <p class="trend__current">
+                  <span class="trend__label">Current bid:</span>
+                  <span class="trend__amount js-current">480.00&nbsp;€</span>
+                </p>
+                <div class="trend__cta">
+                  <a class="trend__details" href="#auctions" aria-label="Show details — Chrome Idol Camo Reliquary">Show details</a>
+                  <button type="button" class="trend__bid" data-bid-open="1204" data-min="510">Bid now</button>
+                </div>
+              </li>
+            </ul>
+            <button class="trend__nav trend__nav--prev" type="button" aria-label="Previous auctions" data-trend-prev>
+              <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L2 16L16 30" stroke="currentColor" stroke-width="1.4"/></svg>
+            </button>
+            <button class="trend__nav trend__nav--next" type="button" aria-label="Next auctions" data-trend-next>
+              <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L16 16L2 30" stroke="currentColor" stroke-width="1.4"/></svg>
+            </button>
+          </div>
+          <a class="trend__viewall" href="#auctions">View all lots</a>
+        </section>
+
+        <!-- ═══════════ 07 · LATEST FROM ATELIER ═══════════ -->
+        <section class="lreborn alignfull" id="atelier" data-latest-reborn>
+          <div class="lreborn__decor" aria-hidden="true"><div class="lreborn__glow"></div></div>
+          <h2 class="lreborn__title">Latest from Atelier</h2>
+          <div class="lreborn__body">
+            <ul class="lreborn__list">
+              <li>
+                <a class="lreborn__row is-active" href="#atelier" data-lr-img="assets/img/atelier-01.jpg">
+                  <span class="lreborn__row-title">My Grandfather’s Chronograph</span>
+                  <span class="lreborn__row-meta">By Mara Ellison</span>
+                  <span class="lreborn__row-date">04 09 2026</span>
+                </a>
+              </li>
+              <li>
+                <a class="lreborn__row" href="#atelier" data-lr-img="assets/img/atelier-02.jpg">
+                  <span class="lreborn__row-title">The Pair That Chose Me</span>
+                  <span class="lreborn__row-meta">By Elias Ward</span>
+                  <span class="lreborn__row-date">02 09 2026</span>
+                </a>
+              </li>
+              <li>
+                <a class="lreborn__row" href="#atelier" data-lr-img="assets/img/atelier-03.jpg">
+                  <span class="lreborn__row-title">Restored After Fifteen Years</span>
+                  <span class="lreborn__row-meta">By Sana Iqbal</span>
+                  <span class="lreborn__row-date">31 08 2026</span>
+                </a>
+              </li>
+              <li>
+                <a class="lreborn__row" href="#atelier" data-lr-img="assets/img/atelier-04.jpg">
+                  <span class="lreborn__row-title">The First Relic</span>
+                  <span class="lreborn__row-meta">By Michael Thorne</span>
+                  <span class="lreborn__row-date">28 08 2026</span>
+                </a>
+              </li>
+            </ul>
+            <figure class="lreborn__figure">
+              <img class="lreborn__img" data-lr-image src="assets/img/atelier-01.jpg" alt="A restored heirloom chronograph on a desk of letters" decoding="async" />
+            </figure>
+          </div>
+          <a class="lreborn__cta" href="#journal">Read the atelier</a>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- ░░ FOOTER ░░ -->
+    <footer class="wp-block-template-part" id="journal">
+      <div class="site-footer">
+        <div class="site-footer__clouds" aria-hidden="true" data-clouds-3d
+             data-tex-back="assets/img/footer-clouds-back.png"
+             data-tex-front="assets/img/footer-clouds-front.png"></div>
+
+        <div class="site-footer__newsletter">
+          <h2 class="site-footer__heading">Updates for the Night Owls</h2>
+          <div class="site-footer__form">
+            <form class="night-form" novalidate>
+              <div class="night-form__field">
+                <label class="screen-reader-text" for="night-email">Email</label>
+                <input id="night-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+              </div>
+              <div class="night-form__actions">
+                <button class="wpforms-submit" type="submit">Join the night list</button>
+                <p class="night-form__note" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <ul class="site-footer__links">
+            <li><a href="#journal">FAQ</a></li>
+            <li><a href="#journal">T&amp;C</a></li>
+            <li><a href="#journal">Shipping &amp; Returns</a></li>
+            <li><a href="#journal">Privacy Policy</a></li>
+            <li><a href="#journal">Cookie Policy</a></li>
+          </ul>
+          <p class="site-footer__copyright">©Nocturne 2026 All Rights Reserved</p>
+          <ul class="site-footer__socials">
+            <li><a href="#" rel="noopener">Instagram</a></li>
+            <li><a href="#" rel="noopener">TikTok</a></li>
+            <li><a href="#" rel="noopener">Discord</a></li>
+            <li><a href="#" rel="noopener">WhatsApp</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="site-footer__cookies" type="button" data-cookie-settings>Cookie settings</button>
+          <p class="site-footer__credit">Designed &amp; built after midnight · <a href="#top">Nocturne Studio</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ░░ BID MODAL ░░ -->
+  <div class="bid-modal" aria-hidden="true">
+    <div class="bid-modal__backdrop"></div>
+    <div class="bid-modal__panel" role="dialog" aria-modal="true" aria-labelledby="bid-title">
+      <p class="bid-modal__eyebrow"><span>Lot</span> <span class="js-modal-lot">#1201</span></p>
+      <p class="bid-modal__title" id="bid-title">Place your bid</p>
+      <p class="bid-modal__terms">Bids are binding and verified by the house. Minimum increment <span class="js-modal-min">340 €</span>. You will be contacted by the archivist if the hammer falls your way.</p>
+      <div class="bid-modal__actions">
+        <button class="bid-modal__cancel" type="button">Not tonight</button>
+        <a class="bid-modal__confirm" href="#auctions">Confirm bid</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor-ring" aria-hidden="true"><span class="cursor-ring__label"></span></div>
+
+  <!-- ░░ HOUSE WHISPER TOAST ░░ -->
+  <div class="whisper" role="note" aria-live="polite">
+    <button class="whisper__close" type="button" aria-label="Dismiss">&times;</button>
+    <p class="whisper__title">House Whisper</p>
+    <p class="whisper__line">What the ordinary call obsession, the house calls devotion.</p>
+  </div>
+
+  <!-- ░░ COOKIE CONSENT ░░ -->
+  <div class="rfc-backdrop" hidden></div>
+  <div class="rfc-consent" role="dialog" aria-modal="false" aria-labelledby="rfc-title" hidden>
+    <button class="rfc-close" type="button" aria-label="Close">&times;</button>
+    <div class="rfc-inner">
+      <div class="rfc-copy">
+        <strong id="rfc-title">We keep a few candles lit</strong>
+        <p>Essential cookies keep this house running. With your permission we also measure the rooms anonymously. <a class="rfc-link" href="#journal">Privacy policy</a></p>
+      </div>
+      <div class="rfc-actions">
+        <button class="rfc-btn rfc-accept-all" type="button">Accept all</button>
+        <button class="rfc-btn rfc-customize" type="button">Customize</button>
+        <button class="rfc-btn rfc-reject-all" type="button">Reject all</button>
+      </div>
+    </div>
+  </div>
+  <button class="rfc-floating" type="button" aria-label="Cookie settings" data-cookie-settings>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9c-1.2 0-3.2-.3-3.2-2.4 0-1.3.4-2.1.6-3.1-2.5.2-3.6-1.6-3.8-3.4A9 9 0 0 1 12 21Z" stroke="currentColor" stroke-width="1.2"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="13.5" r="1" fill="currentColor"/><circle cx="9.5" cy="15.5" r="1" fill="currentColor"/></svg>
+  </button>
+
+  <!-- ░░ COOKIE MODAL ░░ -->
+  <div class="rfc-modal" hidden>
+    <div class="rfc-modal-backdrop"></div>
+    <div class="rfc-modal-card" role="dialog" aria-modal="true" aria-labelledby="rfc-modal-title">
+      <button class="rfc-close rfc-close-modal" type="button" aria-label="Close">&times;</button>
+      <h2 id="rfc-modal-title">Cookie preferences</h2>
+      <p class="rfc-preferences-desc">Choose which parts of the house may remember you.</p>
+      <form class="rfc-form">
+        <div class="rfc-row">
+          <div class="rfc-col">
+            <label><strong>Essential</strong></label>
+            <div class="rfc-desc">Needed for the doors to open. Always on.</div>
+          </div>
+          <div class="rfc-col rfc-col-toggle"><span class="rfc-required">Always on</span></div>
+        </div>
+        <div class="rfc-row">
+          <div class="rfc-col">
+            <label><strong>Analytics</strong></label>
+            <div class="rfc-desc">Anonymous counting of footsteps through the rooms.</div>
+          </div>
+          <div class="rfc-col rfc-col-toggle">
+            <label class="rfc-switch"><input type="checkbox" name="analytics" /><span class="rfc-slider"></span></label>
+          </div>
+        </div>
+        <div class="rfc-row">
+          <div class="rfc-col">
+            <label><strong>Personalisation</strong></label>
+            <div class="rfc-desc">Remembers your taste between visits.</div>
+          </div>
+          <div class="rfc-col rfc-col-toggle">
+            <label class="rfc-switch"><input type="checkbox" name="personalisation" /><span class="rfc-slider"></span></label>
+          </div>
+        </div>
+        <div class="rfc-actions rfc-actions-end">
+          <button class="rfc-btn rfc-accept-all" type="button">Accept all</button>
+          <button class="rfc-btn rfc-save" type="submit">Save choices</button>
+          <button class="rfc-btn rfc-reject-all" type="button">Reject all</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
